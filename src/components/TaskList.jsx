@@ -1,6 +1,6 @@
 import TaskCard from './TaskCard';
 
-function TaskList({tasks}) {
+function TaskList({tasks, deleteTask}) {
 // function TaskList(props) {
 
     if (tasks.length === 0) {
@@ -13,7 +13,7 @@ function TaskList({tasks}) {
         
         {/* {props.tasks.map((task) => ( */}
         {tasks.map((task) => (
-            <TaskCard key={task.id} task={task}/>
+            <TaskCard key={task.id} task={task} deleteTask={deleteTask}/>
         ))}
 
     </div>
